@@ -1,0 +1,119 @@
+*{
+	margin : 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: white; 
+}
+header{
+	text-align: center;
+	background-color: lightgreen;
+	font-family: verdana;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 20px;
+}
+.score{
+	
+	border: 2px solid black;
+	text-align: center;		
+	border-radius: 20px;
+	width : 150px;
+	margin: 20px auto;
+	padding: 15px 20px;
+	font-size: 40px;
+	background-color: darkblue;
+	color: white;
+	position: relative;
+}
+.player{
+	font-size: 15px;
+	padding : 2px 10px;
+	background-color: red;
+}
+#user-player{
+	position: absolute;
+	top: 30px;
+	left: -25px;
+}
+#mach-player{
+	position: absolute;
+	top: 30px;
+	left: 123px;
+}
+.player-img{
+	width: 50px;
+	height: 50px;
+}
+#pic-user{
+	position: absolute;
+	top: 20px;
+	left: -90px;
+}
+#pic-mach{
+	position: absolute;
+	top: 20px;
+	left: 180px;
+}
+.condition{
+	border: 2px solid black;
+	text-align: center;
+	border-radius: 20px;
+	width : 350px;
+	margin: 20px auto;
+	padding: 15px 20px;
+}
+#cond{
+	text-decoration-line: underline;
+}
+.condition ul{
+	list-style: circle;
+	padding: 5px;
+	color: black; 
+	width: 3500px;
+	text-align: left;
+	font-size: 20px;
+}
+.choices{
+	text-align: center;
+	margin: 15px;
+}
+.choice{
+	display: inline-block;
+	border: 2px solid darkblue;
+	cursor: pointer;
+	margin: 0px 10px;
+	border-radius: 40px;
+	padding: 10px;
+}
+.choice:hover{
+	border: 2px solid red;
+}
+#move{
+	text-align: center;
+	letter-spacing: 3px;
+	padding: 10px;
+	color: green;
+	font-size: 20px;
+
+}
+
+.result{
+	text-align: center;
+	font-size: 20px;
+	padding: 20px;
+	margin: 0 auto;
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
