@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>new web browser</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="first.css">
+</head>
+<body>
+ 	<nav class="nav-bar">
+ 			<input type="checkbox" id="check">
+ 			<label for="check" class="butt">
+ 				<i>C</i>
+ 			</label>
+ 			<label class="logo">Logo</label>
+ 			<ul>
+ 				<li><a href="#">Home</a></li>
+ 				<li><a href="#">Contact</a></li>
+ 				<li><a href="#">About</a></li>
+ 				<li><a href="#game.html">games</a></li>
+ 				<li><a href="#">Login</a></li>
+ 			</ul>
+
+ 	</nav>
+
+ <div class="score">
+	<div class="player" id="user-player">user</div>
+	<img src="https://www.kindpng.com/picc/m/78-785827_user-profile-avatar-login-account-male-user-icon.png" id="pic-user" class="player-img">
+	<img src="https://imageog.flaticon.com/icons/png/512/31/31106.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF" id="pic-mach" class="player-img">
+
+	<div class="player" id="mach-player">mach</div>
+	<span id="user-score">0</span>:<span id="machine-score">0</span>
+</div>
+<p id="move">choose your option</p>
+
+<div class="choices">
+	<div class="choice" id="r">
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTzi8xjHod6u5p2sbHF-7vfwKzUsnp6FnXozwrc6YsgOXMEEyqA&usqp=CAU" id="rock" style="width: 50px;height: 50px;">
+	<p>stone</p>
+	</div>
+	<div class="choice" id="p">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTmimdyHyerFnkdZtwhp6t9k5K2_mYBcCOHTOaDETmfPjTl1ILO&usqp=CAU" id="paper" style="width: 50px;height: 50px;">
+		<p>paper</p>
+	</div>
+	<div class="choice" id="s">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTtO53UeVk2JBXGww9Q3qtG7UCH0q-iHMGc2RrBeq6Zm5Mxlksl&usqp=CAU" id="scissors" style="width: 50px;height: 50px;">
+		<p>scissors</p>
+	</div>
+</div>
+
+<div class="result">
+<h3 style="font-weight: bold;text-decoration-line: underline;text-decoration-color: red">View result</h3>
+<p id="demo1" style="display: none;font-style: italic;letter-spacing: 2px"></p><br>
+<button type="button" onclick="call()" style="padding: 3px;">view</button>
+<button type="button" onclick="callhide()" style="padding : 3px">hide</button>
+</div>
+<div class="condition">
+<h2 id="cond">CONDITIONS TO WIN:</h2>
+<ul id="list">
+	<li>Paper Covers Stone</li>
+	<li>Rock Breaks scissors</li>
+	<li>scissors cuts paper</li>
+</ul>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
