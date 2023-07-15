@@ -22,6 +22,14 @@
 		<div class="player" id="mach-player">MAC</div>
 		<span id="user-score">0</span>:<span id="machine-score">0</span>
 	</div>
+	<div class="condition">
+		<h2 id="cond">CONDITIONS TO WIN:</h2>
+		<ul id="list">
+			<li>Paper Covers Stone</li>
+			<li>Rock Breaks scissors</li>
+			<li>scissors cuts paper</li>
+		</ul>
+	</div>
 	<p id="move">choose your option</p>
 
 	<div class="choices">
@@ -41,25 +49,16 @@
 			<p>scissors</p>
 		</div>
 	</div>
-	<div class="result" style="padding: 0px !important;">
-		<button type="button" onclick="reset()"
-			style="padding: 6px; border-radius : 7px; background-color : rgb(68, 77, 78); color : whitesmoke">RESET MATCH RESULT</button>
-	</div>
 	<div class="result">
 		<p style="display: none;font-style: italic;letter-spacing: 2px"></p><br>
-		<button type="button" onclick="call()"
-			style="padding: 6px; border-radius : 7px; background-color : rgb(14, 173, 62); color : whitesmoke">VIEW RESULT</button>
-		<button type="button" onclick="callhide()"
-			style="padding : 6px; border-radius : 7px; background-color : rgb(196, 34, 34); color : whitesmoke">HID RESULT</button>
+		<button type="button" onclick="viewResult()" id="result"
+			style="padding: 6px; border-radius : 7px; background-color : rgb(14, 173, 62); color : whitesmoke">VIEW
+			RESULT</button>
+		<button type="button" onclick="reset()"
+			style="padding: 6px; border-radius : 7px; background-color : rgb(68, 77, 78); color : whitesmoke">RESET
+			MATCH</button>
 	</div>
-	<div class="condition">
-		<h2 id="cond">CONDITIONS TO WIN:</h2>
-		<ul id="list">
-			<li>Paper Covers Stone</li>
-			<li>Rock Breaks scissors</li>
-			<li>scissors cuts paper</li>
-		</ul>
-	</div>
+
 	<script src="game.js"></script>
 </body>
 
