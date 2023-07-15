@@ -1,5 +1,6 @@
 let UserScore = 0;
 let CompScore = 0;
+var viewResultChange = false;
 const userScore_span = document.getElementById("user-score");
 const compScore_span = document.getElementById("machine-score");
 const scoreBoard_div = document.querySelector(".score");
@@ -33,19 +34,27 @@ function reset() {
   result_p.innerHTML = "";
   location.reload();
 }
-function call() {
-  // body...
-  result_p.style.display = "block";
-  result_p.style.padding = "20px";
-  result_p.innerHTML = result_p.innerHTML.startsWith(
-    "choose any option to view result"
-  )
-    ? "choose any option to view result"
-    : result_p.innerHTML;
-}
-function callhide() {
-  // body...
-  result_p.style.display = "none";
+function viewResult() {
+  console.log(viewResultChange);
+  if (!viewResultChange) {
+    viewResultChange = true;
+    document.getElementById("result").innerHTML = "HIDE RESULT";
+    document.getElementById("result").style.backgroundColor =
+      "rgb(189, 21, 21)";
+    result_p.style.display = "block";
+    result_p.style.padding = "10px";
+    result_p.innerHTML = result_p.innerHTML.startsWith(
+      "choose any option to view result"
+    )
+      ? "choose any option to view result"
+      : result_p.innerHTML;
+  } else {
+    viewResultChange = false;
+    document.getElementById("result").innerHTML = "VIEW RESULT";
+    document.getElementById("result").style.backgroundColor =
+      "rgb(14, 173, 62)";
+    result_p.style.display = "none";
+  }
 }
 function place(choosed) {
   // body...
@@ -63,7 +72,7 @@ function win(userchoice, compchoice) {
 
   result_p.innerHTML =
     "You Won computer" +
-    "<br><br>" +
+    "<br>" +
     "you choosed : " +
     place(userchoice) +
     "<br>" +
@@ -76,7 +85,7 @@ function lose(userchoice, compchoice) {
   compScore_span.innerHTML = CompScore;
   result_p.innerHTML =
     "You lost with computer" +
-    "<br><br>" +
+    "<br>" +
     "you choosed : " +
     "<bold>" +
     place(userchoice) +
@@ -87,7 +96,7 @@ function lose(userchoice, compchoice) {
 function draw(userchoice, compchoice) {
   result_p.innerHTML =
     "both gets draw" +
-    "<br><br>" +
+    "<br>" +
     "you choosed : " +
     place(userchoice) +
     "<br>" +
